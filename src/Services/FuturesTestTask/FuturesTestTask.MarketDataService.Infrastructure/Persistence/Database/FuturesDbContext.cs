@@ -7,7 +7,8 @@ namespace FuturesTestTask.MarketDataService.Infrastructure.Persistence.Database;
 public class FuturesDbContext : DbContext
 {
     public FuturesDbContext(DbContextOptions<FuturesDbContext> options) : base(options)
-    { }
+    {
+    }
     
     public DbSet<FuturesData> FuturesData { get; set; }
 

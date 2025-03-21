@@ -21,7 +21,6 @@ public static class WebApplicationExtensions
 
         app.UseHttpsRedirection();
         app.UseRouting();
-        app.UseAuthorization();
         app.MapControllers();
         app.UseMiddleware<ExceptionHandlingMiddleware>();
 

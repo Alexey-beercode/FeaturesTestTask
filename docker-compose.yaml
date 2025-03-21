@@ -3,7 +3,7 @@
 services:
   market-data-service:
     build:
-      context: ./src
+      context: ./src/Services/FuturesTestTask/
       dockerfile: FuturesTestTask.MarketDataService.Presentation/Dockerfile
     ports:
       - "5000:5000"

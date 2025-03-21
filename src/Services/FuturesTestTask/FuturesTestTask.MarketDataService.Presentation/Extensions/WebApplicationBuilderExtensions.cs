@@ -20,6 +20,7 @@ public static class WebApplicationBuilderExtensions
 {
     public static WebApplicationBuilder RegisterServices(this WebApplicationBuilder builder)
     {
+        builder.Services.AddControllers();
         builder.RegisterDbContext();
         builder.RegisterBinance();
         builder.RegisterRepositories();
@@ -50,6 +51,7 @@ public static class WebApplicationBuilderExtensions
 
         builder.Services.AddDbContext<FuturesDbContext>(options =>
             options.UseNpgsql(connectionString));
+        builder.Services.AddScoped<DbContext>(provider => provider.GetRequiredService<FuturesDbContext>());
     }
     private static void AddBinanceHttpResiliencePolicy(this WebApplicationBuilder builder)
     {

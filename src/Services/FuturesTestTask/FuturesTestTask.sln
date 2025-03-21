@@ -12,11 +12,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuturesTestTask.MarketDataS
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{55209979-2D34-4C83-97C5-DCA40C2A8EFD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{807788C5-501B-49A8-A3EC-CA7C3FCB7F9A}"
-	ProjectSection(SolutionItems) = preProject
-		docker-compose.yaml = docker-compose.yaml
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuturesTestTask.MarketDataService.Tests", "FuturesTestTask.MarketDataService.Tests\FuturesTestTask.MarketDataService.Tests.csproj", "{5175F6A2-4BD2-48F3-84C5-D915B5971F37}"
 EndProject
 Global
