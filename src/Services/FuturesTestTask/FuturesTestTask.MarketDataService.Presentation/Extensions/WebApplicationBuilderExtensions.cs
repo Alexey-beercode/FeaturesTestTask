@@ -29,6 +29,7 @@ public static class WebApplicationBuilderExtensions
         builder.RegisterUseCases();
         builder.AddBinanceHttpResiliencePolicy();
         builder.ConfigureSerilog();
+        builder.AddSwagger();
         return builder;
     }
 
@@ -97,6 +98,11 @@ public static class WebApplicationBuilderExtensions
     private static void RegisterRepositories(this WebApplicationBuilder builder)
     {
         builder.Services.AddScoped<IFuturesDataRepository, FuturesDataRepository>();
+    }
+    
+    private static void AddSwagger(this WebApplicationBuilder builder)
+    {
+        builder.Services.AddSwaggerGen();
     }
 
     private static void RegisterUnitOfWork(this WebApplicationBuilder builder)
